@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Dependency Injection RoomDB</string>
+    <string name="dummy_name">Product Name</string>
+</resources>

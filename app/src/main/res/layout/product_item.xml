@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp"
+    android:outlineSpotShadowColor="#40163BDE"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_shop_img"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/img_shop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_background" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#2E3A59"
+            android:textSize="14sp"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/card_shop_img"
+            app:layout_constraintTop_toTopOf="@+id/card_shop_img"
+            android:text="Product name" />
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textAllCaps="false"
+            android:textColor="#7B94FF"
+            android:textSize="12sp"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/card_shop_img"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name"
+            android:drawablePadding="8dp"/>
+
+        <TextView
+            android:id="@+id/txt_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/bg_dot_blue_small"
+            android:drawablePadding="4dp"
+            android:layout_marginStart="8dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="#545454"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/layout_rating"
+            app:layout_constraintTop_toBottomOf="@+id/txt_description"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_rating"
+            app:layout_constraintStart_toEndOf="@+id/card_shop_img"
+            android:text="item" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_category"
+            app:layout_constraintTop_toBottomOf="@+id/txt_description">
+
+
+            <TextView
+                android:id="@+id/txt_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@id/txt_rating_count"
+                android:drawablePadding="4dp"
+                android:textColor="#0055E3"
+                android:textSize="12sp"
+                android:includeFontPadding="false"
+                app:layout_constraintEnd_toStartOf="@+id/txt_rating_count"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="5.0"
+                app:drawableStartCompat="@drawable/ic_star_full" />
+
+            <TextView
+                android:id="@+id/txt_rating_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="#979797"
+                android:textSize="11sp"
+                android:includeFontPadding="false"
+                app:layout_constraintBottom_toBottomOf="@id/txt_rating"
+                app:layout_constraintStart_toEndOf="@+id/txt_rating"
+                app:layout_constraintTop_toTopOf="@id/txt_rating"
+                tools:ignore="SmallSp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txt_present_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:maxWidth="60dp"
+            android:maxLines="1"
+            android:paddingTop="4dp"
+            android:textColor="#163BDE"
+            android:layout_marginBottom="8dp"
+            android:includeFontPadding="false"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/layout_rating"
+            app:layout_constraintStart_toStartOf="@id/txt_category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="$ 10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
