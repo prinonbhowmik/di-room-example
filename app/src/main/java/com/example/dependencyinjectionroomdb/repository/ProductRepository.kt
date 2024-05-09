@@ -1,12 +1,18 @@
 package com.example.dependencyinjectionroomdb.repository
 
 import com.example.dependencyinjectionroomdb.base.BaseRepository
+import com.example.dependencyinjectionroomdb.db.ProductDB
+import com.example.dependencyinjectionroomdb.db.ProductDao
 import com.example.dependencyinjectionroomdb.retrofit.ApiInterface
 import javax.inject.Inject
 
-class ProductRepository @Inject constructor(private val apiInterface: ApiInterface) : BaseRepository() {
+class ProductRepository
+@Inject constructor(
+    private val apiInterface: ApiInterface,
+) : BaseRepository() {
 
     suspend fun getProducts() = safeApiCall {
         apiInterface.getProducts()
     }
+
 }

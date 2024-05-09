@@ -23,4 +23,7 @@ class ProductViewmodel
         _getProductListResponse.value = DataState.Loading
         _getProductListResponse.value = repository.getProducts()
     }
+
+
+
 }

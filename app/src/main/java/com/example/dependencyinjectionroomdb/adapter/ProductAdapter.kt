@@ -27,8 +27,7 @@ class ProductAdapter(private val productList : List<ProductList> ) : RecyclerVie
                 txtDescription.text = product.description
                 txtCategory.text = product.category
                 txtPresentPrice.text = "$${product.price}"
-                txtRating.text = product.rating?.rate.toString()
-                txtRatingCount.text = product.rating?.count.toString()
+
             }
 
         }
